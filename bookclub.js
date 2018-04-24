@@ -1,5 +1,3 @@
-
-
 function newRequest() {
 
 	var title = document.getElementById("title").value;
