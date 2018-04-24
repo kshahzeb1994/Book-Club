@@ -12,7 +12,6 @@ function newRequest() {
 	isbn = isbn.trim();
 	isbn = isbn.replace("-","");
 
-
 	var query = ["",title,author,isbn].join("+");
 	if (query != "") {
 
@@ -34,9 +33,8 @@ function newRequest() {
 		// put new script into DOM at bottom of body
 		document.body.appendChild(script);
 		}
-
+    
 }
-
 
 function handleResponse(bookListObj) {
 	var bookList = bookListObj.items;
@@ -44,15 +42,34 @@ function handleResponse(bookListObj) {
 	/* where to put the data on the Web page */
 	var bookDisplay = document.getElementById("bookDisplay");
 
-	/* write each title as a new paragraph */
-	for (i=0; i<bookList.length; i++) {
-		var book = bookList[i];
-		var title = book.volumeInfo.title;
-		var titlePgh = document.createElement("p");
-		/* ALWAYS AVOID using the innerHTML property */
-		titlePgh.textContent = title;
-		bookDisplay.append(titlePgh);
-	}
+//	/* write each title as a new paragraph */
+//	for (i=0; i<bookList.length; i++) {
+//		var book = bookList[i];
+//		var title = book.volumeInfo.title;
+//		var titlePgh = document.createElement("p");
+//		/* ALWAYS AVOID using the innerHTML property */
+//		titlePgh.textContent = title;
+//		bookDisplay.append(titlePgh);
+//	}
+    var i = 0;
+    var book = bookList[i];
+    var title = book.volumeInfo.title;
+    var titlePgh = document.createElement("p");
+    /* ALWAYS AVOID using the innerHTML property */
+    titlePgh.textContent = title;
+    bookDisplay.append(titlePgh);
+    
+    var right = document.getElementById("right_arrow")
+    
+    right.onclick = function () {
+        i++;
+        var book = bookList[i];
+        var title = book.volumeInfo.title;
+        var titlePgh = document.createElement("p");
+        /* ALWAYS AVOID using the innerHTML property */
+        titlePgh.textContent = title;
+        bookDisplay.append(titlePgh);    
+    }
 }
 
 
