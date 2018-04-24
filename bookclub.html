@@ -47,8 +47,17 @@ BOOK CLUB
         <input id="isbn" placeholder="ex 000-0-00-000000-0">
         </div>
     </div>
-    <button class="button" onclick="newRequest()">Search</button>
+    <button class="button" onclick="newRequest(); ShowOverlay();">Search</button>
     
+</div>
+
+<div class="overlay_base" id="overlay">
+    <button class="close_button" type="button" onClick="HideOverlay();">X</button>
+    
+    <div class="overlay_inner">
+<!--	Display search results here-->
+    </div>
+    <button class="keep_button" type="button" onClick="NewWidget();">Keep</button>
 </div>
 
 <div id="bookDisplay">

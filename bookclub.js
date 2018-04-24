@@ -56,3 +56,12 @@ function handleResponse(bookListObj) {
 		bookDisplay.append(titlePgh);
 	}
 }
+
+
+function ShowOverlay() {
+    document.getElementById("overlay").style.display = "flex";
+}
+
+function HideOverlay() {
+    document.getElementById("overlay").style.display = "none";
+}

@@ -112,8 +112,50 @@ input {
 	font-size: medium;
 }
 
+.overlay_base {
+    display: none; /* Start out hidden, we'll dynamically enable it later. */
 
-/* p {
-	font-size: medium;
-	margin: 10px;
-} */
+    /* Full-window container ... */
+    position: fixed; 
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    /* ... floating above everything else ... */
+    z-index: 2;
+
+    /* ... with partial transparency, 
+           to make everything else look greyed out */
+    background-color: rgba(0,0,0,0.5);
+
+    /* Flex options for child objects */
+    align-items: center;
+    justify-content: center;
+}
+
+.overlay_inner {
+    width: 50%;
+    height: 50%;
+    background-color: rgb(255,255,255); /* Must set the background color here, 
+				otherwise it inherits from the parent */
+    position: relative;
+    margin-bottom: 2%;
+}
+
+/* Not covered in Discussion: force the close button into
+              the upper-right corner of it's parent container */
+.close_button {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+}
+
+.keep_button {
+    position: absolute;
+    bottom: 0px;
+    justify-content: center;
+    margin-bottom: 20%; 
+}
