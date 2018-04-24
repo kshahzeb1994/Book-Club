@@ -1,0 +1,119 @@
+
+body {
+	min-height: 100vh;  /* need this line to
+					tell body to fill viewport */
+	font-family: 'Roboto', sans-serif;
+	background-color: white;
+	display: flex;
+	flex-direction: column;
+	color: #4A73FF;
+	font-size: 25px;
+     }
+
+header {
+       text-align: left;
+       padding: 10px;
+	   position: relative;
+	   bottom: -15px;
+	   font-weight: bold;
+
+}
+
+h4 {
+	color: black;
+	position: relative;
+	bottom: -45px;
+	right: -10px;
+	font-weight: lighter;
+}
+
+.centering {
+	position: relative;
+	right: -100px;
+
+}
+
+/* #subtitle {
+	color: black;
+} */
+
+#the-author {
+	display: flex;
+	flex-direction: column;
+	padding: 10px;
+	font-weight: lighter;
+
+}
+#the-title {
+	display: flex;
+	flex-direction: column;
+	padding: 10px;
+	font-weight: lighter;
+}
+#the-isbn {
+	display: flex;
+	flex-direction: column;
+	padding: 10px;
+	font-weight: lighter;
+}
+#or {
+	display: flex;
+	flex-direction: row;
+	padding: 10px;
+	position: relative;
+	bottom: -25px;
+
+}
+
+/* #search {
+	display: flex;
+	position: relative;
+	right: -300px;
+
+
+} */
+.button {
+    background-color: #4A73FF;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+	border-radius: 12px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+	position: relative;
+	bottom: -20px;
+	right: -280px;
+}
+
+.nav {
+	display: flex;
+	flex-direction: row;
+
+}
+
+/*
+
+h1 {
+   font-size: x-large;
+   font-weight: light;
+} */
+
+
+main {
+     flex: 1 0 auto;  /* the sticky footer trick without the footer */
+}
+
+
+input {
+	border-style: solid;
+	border-radius: 5px;
+	font-size: medium;
+}
+
+
+/* p {
+	font-size: medium;
+	margin: 10px;
+} */
