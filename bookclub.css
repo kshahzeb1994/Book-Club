@@ -162,6 +162,11 @@ input {
 }
 
 @media (max-width: 480px){
+	header {
+	       text-align: center;
+		   position: relative;
+		   bottom: -25px;
+	}
 	.centering {
 		position: relative;
 		left: 25px;
